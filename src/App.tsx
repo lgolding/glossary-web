@@ -1,12 +1,11 @@
+import { Typography } from "@material-ui/core";
 import React from "react";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Technical Glossary</h1>
-      </header>
+    <div>
+      <Typography variant="h1">Technical Glossary</Typography>
     </div>
   );
 }
