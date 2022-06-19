@@ -8,13 +8,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
+import TermModel from "../models/TermModel";
 
-interface TermModel {
-  term: string;
-  definition: string;
-}
-
-function createTerm(term: string, definition: string) {
+function createTerm(term: string, definition: string): TermModel {
   return { term, definition };
 }
 
