@@ -26,7 +26,7 @@ jobs:
           node-version: "16.x"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Run unit tests
         # Setting CI to true before running the tests causes the tests to run only once
