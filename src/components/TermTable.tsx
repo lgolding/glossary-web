@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 
-interface Term {
+interface TermModel {
   term: string;
   definition: string;
 }
@@ -18,7 +18,7 @@ function createTerm(term: string, definition: string) {
   return { term, definition };
 }
 
-const terms: Term[] = [
+const terms: TermModel[] = [
   createTerm(
     "Agile",
     "A set of software development principles and practices designed to allow teams to respond quickly to changes in requirements and the business environment."
@@ -39,7 +39,7 @@ export default function TermTable() {
       <Typography variant="h2">Terms</Typography>
       <Table>
         <TableBody>
-          {terms.map((term: Term) => (
+          {terms.map((term: TermModel) => (
             <TableRow key={term.term}>
               <TableCell>{term.term}</TableCell>
               <TableCell>{term.definition}</TableCell>
