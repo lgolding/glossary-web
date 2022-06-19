@@ -1,13 +1,13 @@
 import { Typography } from "@material-ui/core";
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
+import TermTable from "./components/TermTable";
 
-function App() {
+export default function App() {
   return (
-    <div>
+    <Fragment>
       <Typography variant="h1">Technical Glossary</Typography>
-    </div>
+      <TermTable />
+    </Fragment>
   );
 }
-
-export default App;
