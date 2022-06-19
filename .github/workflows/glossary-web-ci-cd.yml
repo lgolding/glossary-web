@@ -15,9 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v2
+      - name Check out
+      - uses: actions/checkout@v3
         with:
           submodules: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Run unit tests
         # Setting CI to true before running the tests causes the tests to run only once
