@@ -18,6 +18,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+
+      - name: Run unit tests
+        # Setting CI to true before running the tests causes the tests to run only once
+        # rather than in interactive "watch" mode.
+        # See https://create-react-app.dev/docs/running-tests/#on-ci-servers
+        run: set CI=true && npm test
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
