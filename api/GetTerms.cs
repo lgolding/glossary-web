@@ -17,17 +17,17 @@ namespace AsterSystemsInc.Glossary
         {
             new TermModel
             {
-                Term = "Agile!",
+                Term = "Agile",
                 Definition = "A set of software development principles and practices designed to allow teams to respond quickly to changes in requirements and the business environment"
             },
             new TermModel
             {
-                Term = "caching*",
+                Term = "caching",
                 Definition = "The technique of saving the results of database queries that are likely to be repeated in or near the ultimate consumer of the results. This improves performance because when the query is repeated, there is no need to access the database again."
             },
             new TermModel
             {
-                Term = "defense in depth#",
+                Term = "defense in depth",
                 Definition = "The practice of providing multiple layers of system security so that even if an attacker penetrates one layer, they might be stopped by the next layer down."
             }
         };

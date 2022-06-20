@@ -9,15 +9,17 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import TermModel from "../models/TermModel";
+import ITermService from "../services/ITermService";
+import TermService from "../services/TermService";
+
+const termService: ITermService = new TermService();
 
 export default function TermTable() {
   const [terms, setTerms] = useState<TermModel[]>([]);
 
   useEffect(() => {
     (async function () {
-      const responseData: TermModel[] = await (
-        await fetch(`http://localhost:7071/api/GetTerms`)
-      ).json();
+      const responseData: TermModel[] = await termService.getAll();
       setTerms(responseData);
       console.log(terms);
     })();
