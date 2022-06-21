@@ -10,18 +10,18 @@ import {
 import React, { useEffect, useState } from "react";
 import TermModel from "../models/TermModel";
 import ITermService from "../services/ITermService";
-import TermService from "../services/TermService";
 
-const termService: ITermService = new TermService();
+interface TermTableProps {
+  termService: ITermService;
+}
 
-export default function TermTable() {
+export default function TermTable({ termService }: TermTableProps) {
   const [terms, setTerms] = useState<TermModel[]>([]);
 
   useEffect(() => {
     (async function () {
       const responseData: TermModel[] = await termService.getAll();
       setTerms(responseData);
-      console.log(terms);
     })();
   }, []);
 
